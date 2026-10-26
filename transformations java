@@ -1,0 +1,67 @@
+package javaapplication23;
+
+import java.util.Scanner;
+
+public class JavaApplication23 {
+
+    
+    public static void main(String[] args) {
+        Scanner input=new Scanner (System.in);
+        
+        
+        int choice;
+        double number, result;
+        System.out.println("1- Convert from CM to Inch");
+        System.out.println("2- Convert from Inch to CM");
+        System.out.println("3- Convert from M to Feet");
+        System.out.println("4- Convert from Feet to M");
+        System.out.println("5- Convert from Dunum to Hektar");
+        System.out.println("6- Convert from Hektar to Dunum");
+        System.out.println("7- Convert from Celsius to Fahrenheit");
+        System.out.println("8- Convert from Fahrenheit to Celsius");
+        System.out.print("Enter your choice: ");
+        choice = input.nextInt();
+        System.out.print("Enter a number: ");
+        number = input.nextDouble();
+        switch (choice) {
+            case 1:
+                result = number / 2.54;
+                System.out.println("Result = " + result + " Inch");
+                break;
+            case 2:
+                result = number * 2.54;
+                System.out.println("Result = " + result + " CM");
+                break;
+            case 3:
+                result = number * 3.28084;
+                System.out.println("Result = " + result + " Feet");
+                break;
+            case 4:
+                result = number / 3.28084;
+                System.out.println("Result = " + result + " M");
+                break;
+            case 5:
+                result = number / 10.0;
+                System.out.println("Result = " + result + " Hektar");
+                break;
+            case 6:
+                result = number * 10;
+                System.out.println("Result = " + result + " Dunum");
+                break;
+            case 7:
+                result = (number * 9.0 / 5) + 32;
+                System.out.println("Result = " + result + " Fahrenheit");
+                break;
+            case 8:
+                result = (number - 32) * 5.0 / 9;
+                System.out.println("Result = " + result + " Celsius");
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+        input.close();
+    }
+}
+    
+    
+
